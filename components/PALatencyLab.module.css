@@ -1,0 +1,401 @@
+.lab {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+/* ── Typography helpers ── */
+.mono { font-family: var(--font-mono); }
+.text_default   { color: var(--text-primary); }
+.text_secondary { color: var(--text-secondary); }
+.text_tertiary  { color: var(--text-tertiary); }
+.text_info      { color: var(--text-info); }
+.text_success   { color: var(--text-success); }
+.text_danger    { color: var(--text-danger); }
+.text_warning   { color: var(--text-warning); }
+
+/* ── Header ── */
+.header { margin-bottom: 1.5rem; }
+
+.title {
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+/* ── Sections ── */
+.section { margin-bottom: 1.25rem; }
+
+.sectionLabel {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+/* ── Scenario ── */
+.scenarioRow {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+
+.scenarioBtn {
+  padding: 5px 12px;
+  font-size: 12px;
+  border-radius: var(--radius-md);
+  border: 0.5px solid var(--border-default);
+  background: var(--bg-primary);
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+.scenarioBtnActive {
+  border: 2px solid var(--border-info);
+  background: var(--bg-info);
+  color: var(--text-info);
+  font-weight: 500;
+}
+
+.scenarioMeta {
+  font-size: 11px;
+  color: var(--text-tertiary);
+}
+
+/* ── Run button ── */
+.runRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.runBtn {
+  padding: 8px 20px;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: var(--radius-md);
+  border: 0.5px solid var(--border-default);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.runBtn:hover:not(:disabled) { background: var(--bg-secondary); }
+
+.hint {
+  font-size: 12px;
+  color: var(--text-tertiary);
+}
+
+/* ── Cache banner ── */
+.banner {
+  margin-bottom: 1.25rem;
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+}
+
+.bannerSuccess {
+  background: var(--bg-success);
+  border: 0.5px solid var(--border-success);
+}
+
+.bannerTitle {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-success);
+  margin-bottom: 3px;
+}
+
+.bannerBody {
+  font-size: 12px;
+  color: var(--text-success);
+  margin-bottom: 5px;
+}
+
+.bannerNote {
+  font-size: 11px;
+  color: var(--text-success);
+  opacity: 0.85;
+}
+
+/* ── Execution panels ── */
+.panels {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 12px;
+  margin-bottom: 1.25rem;
+}
+
+@media (max-width: 580px) {
+  .panels { grid-template-columns: 1fr; }
+}
+
+.panel {
+  background: var(--bg-primary);
+  border: 0.5px solid var(--border-dim);
+  border-radius: var(--radius-lg);
+  padding: 14px 16px;
+}
+
+.panelHighlight {
+  border: 2px solid var(--border-info);
+}
+
+.panelHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.panelTitle {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.panelDesc {
+  font-size: 11px;
+  color: var(--text-tertiary);
+  margin-top: 1px;
+}
+
+.badge {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: var(--radius-md);
+  background: var(--bg-info);
+  color: var(--text-info);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.panelFooter {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 0.5px solid var(--border-dim);
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.panelTotal {
+  font-weight: 500;
+  font-size: 13px;
+  color: var(--text-primary);
+}
+
+/* ── Tool row ── */
+.toolRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 0;
+  border-bottom: 0.5px solid var(--border-dim);
+}
+
+.toolAvatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  font-weight: 500;
+  flex-shrink: 0;
+  letter-spacing: 0.02em;
+}
+
+.toolLabel {
+  font-size: 12px;
+  color: var(--text-secondary);
+  flex: 1;
+}
+
+.toolBar {
+  width: 80px;
+  height: 3px;
+  background: var(--bg-secondary);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.toolBarFill {
+  height: 100%;
+  width: 100%;
+  border-radius: 2px;
+}
+
+.toolLatency {
+  font-size: 11px;
+  width: 52px;
+  text-align: right;
+  color: var(--text-tertiary);
+}
+
+/* ── Metrics ── */
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 1.25rem;
+}
+
+@media (max-width: 480px) {
+  .metrics { grid-template-columns: repeat(2, 1fr); }
+}
+
+.metricCard {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  padding: 10px 12px;
+  text-align: center;
+}
+
+.metricLabel {
+  font-size: 11px;
+  color: var(--text-secondary);
+  margin-bottom: 3px;
+}
+
+.metricValue {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.metricUnit {
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+/* ── Decision card ── */
+.decisionCard {
+  background: var(--bg-primary);
+  border: 0.5px solid var(--border-dim);
+  border-radius: var(--radius-lg);
+  padding: 14px 16px;
+  margin-bottom: 1.25rem;
+}
+
+.decisionMeta {
+  font-size: 11px;
+  color: var(--text-tertiary);
+  margin-bottom: 10px;
+}
+
+.decisionTop {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.decisionBadge {
+  font-size: 13px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: var(--radius-md);
+}
+
+.decision_APPROVED { background: var(--bg-success); color: var(--text-success); }
+.decision_DENIED   { background: var(--bg-danger);  color: var(--text-danger);  }
+.decision_PENDING  { background: var(--bg-warning); color: var(--text-warning); }
+
+.decisionRationale {
+  font-size: 13px;
+  color: var(--text-primary);
+  line-height: 1.55;
+  margin-bottom: 8px;
+}
+
+.factorRow {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.factor {
+  font-size: 11px;
+  padding: 2px 7px;
+  border-radius: var(--radius-md);
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+}
+
+/* ── Latency bars ── */
+.barCard {
+  background: var(--bg-primary);
+  border: 0.5px solid var(--border-dim);
+  border-radius: var(--radius-lg);
+  padding: 14px 16px;
+  margin-bottom: 1.25rem;
+}
+
+.barRow { margin-bottom: 10px; }
+
+.barRowLabel {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.barTrack {
+  height: 8px;
+  background: var(--bg-secondary);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  border-radius: 4px;
+}
+
+.barDanger  { background: var(--bg-danger);  }
+.barSuccess { background: var(--bg-success); }
+.barInfo    { background: var(--bg-info);    }
+
+/* ── Insight callout ── */
+.insight {
+  border-left: 3px solid var(--border-info);
+  padding-left: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.insightTitle {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-info);
+  margin-bottom: 3px;
+}
+
+.insightBody {
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+/* ── Footer ── */
+.footer {
+  margin-top: 2.5rem;
+  padding-top: 1.25rem;
+  border-top: 0.5px solid var(--border-dim);
+  font-size: 12px;
+  color: var(--text-tertiary);
+}
+
+.footer a {
+  color: var(--text-info);
+  text-decoration: none;
+}
+
+.footer a:hover { text-decoration: underline; }
